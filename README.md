@@ -17,4 +17,4 @@ it is easy to us
 May no more handwriting in this world.  
 
 # Example
-![](https://github.com/CuSO4Gem/godhand/raw/master/DOC/out.gif)
+![](https://github.com/CuSO4Gem/godhand_handwriting/raw/master/DOC/out.gif)
