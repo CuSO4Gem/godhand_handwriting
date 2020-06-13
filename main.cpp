@@ -14,9 +14,8 @@ int main(int argc, char *argv[])
         translator->load("./godhand_zh_CN.qm");
     else
         translator->load("./godhand_zh_EN.qm");
-    qApp->installTranslator(translator);
+    a.installTranslator(translator);
     MainWindow w;
-//    w.setWindowIcon(QIcon(":/icon/mainIcon.png"));
     w.setWindowFlags(w.windowFlags()&Qt::WindowMinMaxButtonsHint|Qt::WindowMaximizeButtonHint|Qt::WindowCloseButtonHint);
     w.show();
     return a.exec();
