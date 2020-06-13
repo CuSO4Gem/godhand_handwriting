@@ -1,0 +1,100 @@
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
+
+#define DEFALUTFONT "Times New Roman" //default font
+
+#include <QObject>
+#include <QMainWindow>
+#include <QMessageBox>
+#include <QPixmap>
+#include <QPainter>
+#include <QPen>
+#include <QString>
+#include <QFont>
+#include <QImage>
+#include <QPoint>
+#include <QRect>
+#include <QTime>
+#include <QList>
+#include <QStringList>
+#include <QListWidgetItem>
+#include <QFileDialog>
+#include <windows.h>
+#include <shellapi.h>
+#include <winnt.h>
+#include <string>
+
+class QMessageBox;
+class QPixmap;
+class QPainter;
+class QPen;
+class QFont;
+class QImage;
+class QPoint;
+class QTime;
+
+namespace Ui {
+class MainWindow;
+}
+
+class MainWindow : public QMainWindow
+{
+    Q_OBJECT
+
+public:
+    explicit MainWindow(QWidget *parent = 0);
+    ~MainWindow();
+	void setRandSource();
+    int getRandnum(int);
+protected:
+
+private slots:
+
+    void on_PenWidthSbx_editingFinished();
+
+    void on_CharacterSizeTxt_editingFinished();
+
+    void on_CharacterSpaceTxt_editingFinished();
+
+    void on_CharacterExample_editingFinished();
+
+    void on_RandOffsetTxt_editingFinished();
+
+    void on_RandPenWidthSbx_editingFinished();
+
+    void on_RandomScaleTxt_editingFinished();
+
+    void on_randRotateTxt_editingFinished();
+
+    void on_addFontBtn_clicked();
+
+    void on_GenerateExp_triggered();
+
+    void on_Preview_triggered();
+
+    void on_SavePage_triggered();
+
+    void on_Ssingal_triggered();
+
+    void on_removeFontBtn_clicked();
+
+    void on_openPreview_triggered();
+
+private:
+    Ui::MainWindow *ui;
+    QList <QImage*> pageList;
+    QList <QFont> fontList;
+    //set ui string
+    void settips();
+//    void setArguement();
+    //show img in Preview area
+    void outPreview(QString *);
+    //draw a charactere and raturn it's image
+    QImage drawCharacter(QString character,int CharacterSpace,int characterSize);
+
+    void generateExp();//generate exmaple character
+    void ifErrorDig(bool, QString);
+    void generateOutPage();
+};
+
+#endif // MAINWINDOW_H

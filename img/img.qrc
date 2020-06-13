@@ -1,0 +1,25 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>BackgroundA4.png</file>
+        <file>angle.png</file>
+        <file>Default.png</file>
+        <file>offset.png</file>
+        <file>Pen width.png</file>
+        <file>size.png</file>
+        <file>cloud.png</file>
+        <file>dcloud.png</file>
+    </qresource>
+    <qresource prefix="/icon">
+        <file>font.png</file>
+        <file>page_white_edit.png</file>
+        <file>table_save.png</file>
+        <file>font_add.png</file>
+        <file>font_delete.png</file>
+        <file>font_go.png</file>
+        <file>application.png</file>
+        <file>help.png</file>
+        <file>mainIcon.png</file>
+        <file>page_white_text.png</file>
+        <file>table_edit.png</file>
+    </qresource>
+</RCC>
